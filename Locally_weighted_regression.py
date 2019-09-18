@@ -4,7 +4,8 @@ import math
 
 
 dataset=pd.read_csv('Dataset1.csv')
-row_index=input("please enter the index number you want to choose as test point")
+nobs = dataset.shape[0]
+row_index=input("please enter the index number from 0 to " + str(nobs-1) + " that you want to choose as test point ")
 row_index=int(row_index)
 target=dataset.loc[row_index][1:6]
 
